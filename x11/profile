@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# comment if not on laptop
+xrandr --output eDP --dpi 144
+
+autostart="lxsession lxqt-powermanagement dunst pipewire volumeicon"
+for program in $autostart; do
+	pidof -sx "$program" || "$program" &
+done >/dev/null 2>&1
+
+nitrogen --restore
+picom --backend glx --config $XDG_CONFIG_HOME/picom/picom.conf &

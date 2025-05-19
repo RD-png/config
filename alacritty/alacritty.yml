@@ -1,0 +1,52 @@
+env:
+  TERM: xterm-256color
+
+font:
+  size: 10.0
+  normal:
+    family: Fantasque Sans Mono
+    style: Normal
+
+scrolling:
+  # How many lines of scrollback to keep,
+  # '0' will disable scrolling.
+  history: 10000
+
+  # Number of lines the viewport will move for every line
+  # scrolled when scrollback is enabled (history > 0).
+  multiplier: 3
+
+window:
+  opacity: 1.0
+  padding:
+    x: 10
+    y: 10
+  decorations: full
+
+# Colors
+import:
+  - ~/.config/alacritty/modus-active.yml
+
+key_bindings:
+  - { key: P,         mods: Control|Shift,                   action: ScrollLineUp     }
+  - { key: N,         mods: Control|Shift,                   action: ScrollLineDown   }
+  - { key: V,         mods: Control,                         action: ScrollPageDown   }
+  - { key: V,         mods: Alt,                             action: ScrollPageUp     }
+  - { key: V,         mods: Control|Shift,                   action: ScrollToBottom   }
+  - { key: V,         mods: Alt|Shift,                       action: ScrollToTop      }
+  - { key: Plus,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,     mods: Control,                         action: DecreaseFontSize }
+  - { key: S,         mods: Control,                         action: SearchBackward   }
+
+   # Search Mode
+  - { key: Return,                    mode: Search,          action: SearchConfirm         }
+  - { key: G,        mods: Control,   mode: Search,          action: SearchCancel          }
+  - { key: C,        mods: Control,   mode: Search,          action: SearchCancel          }
+  - { key: U,        mods: Control,   mode: Search,          action: SearchClear           }
+  - { key: Back,     mods: Control,   mode: Search,          action: SearchDeleteWord      }
+  - { key: P,        mods: Alt,       mode: Search,          action: SearchHistoryPrevious }
+  - { key: N,        mods: Alt,       mode: Search,          action: SearchHistoryNext     }
+  - { key: Up,                        mode: Search,          action: SearchHistoryPrevious }
+  - { key: Down,                      mode: Search,          action: SearchHistoryNext     }
+  - { key: P,        mods: Control,   mode: Search,          action: SearchFocusNext       }
+  - { key: N,        mods: Control,   mode: Search,          action: SearchFocusPrevious   }
