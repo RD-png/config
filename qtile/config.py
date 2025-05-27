@@ -159,7 +159,7 @@ keys.extend(
 )
 
 widget_defaults = dict(
-    fontsize=27,
+    fontsize=22,
     font="fantasquesansmono",
     padding=2,
 )
@@ -286,7 +286,7 @@ screens = [
                     size_percent=50,
                 ),
             ],
-            size=33,
+            size=30,
         ),
     ),
     Screen(
@@ -367,7 +367,7 @@ screens = [
                     size_percent=50,
                 ),
             ],
-            size=22,
+            size=30,
         ),
     ),
 ]
