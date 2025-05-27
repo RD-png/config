@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# comment if not on laptop
-xrandr --output eDP --dpi 144
+# Laptop
+# xrandr --output eDP --dpi 144
+
+# Desktop
+xrandr --output DisplayPort-0 --primary --mode 2560x1440 --rate 280 --dpi 120
+xrandr --output DisplayPort-1 --primary --mode 1920x1080 --rate 144
 
 autostart="lxsession lxqt-powermanagement dunst pipewire volumeicon"
 for program in $autostart; do
